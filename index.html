@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hungries Cafe</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<!-- <body background="bg3.jpg" > -->
+<style>
+    .hero-section {
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/011/332/525/small_2x/hand-drawn-coffee-concept-background-free-vector.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+}
+.contain{
+    background-color:burlywood;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+.body{
+    background-color: burlywood;
+}
+#menu{
+    background-color: burlywood;
+}
+#contact.bg-light{
+    background-color: burlywood !important;
+}
+.footer{
+    background-color: burlywood !important;
+    padding: 50px;
+}
+.button{
+    text-align: center;
+    padding: 6px 1000px 6px 19px;
+   
+}
+input[type="text"]:focus {
+  background-color:antiquewhite;
+}
+input[type="email"]:focus {
+  background-color:antiquewhite;
+}
+
+.col-md-4 :hover{
+    /* color: antiquewhite; */
+    background-color: antiquewhite;
+}
+.containe h1{
+    color: antiquewhite;
+}
+.containe p{
+    color: antiquewhite;
+}
+.card-body button{
+  margin: px 0;
+  padding: 7px 10px;
+  border : underline;
+  border-radius: 10px;
+  font-size: 14px;
+  background-color:burlywood;
+}
+.card-body button :hover{
+    background-color:burlywood;
+}
+
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><b>Hungries Cafe</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#menu">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero-section text-center">
+        <div class="containe">
+            <h1>Welcome to Hungries Cafe</h1>
+            <p>Your perfect place for a delightful coffee experience.</p>
+        </div>
+    </header>
+
+    <section id="menu" class="py-5">
+        <div class="container">
+            <h2 class="text-center"><b>Our Menu</b></h2><hr>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="data:image/jpeg;base64,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" class="card-img-top" alt="Coffee" height="350px">
+                        <div class="card-body">
+                            <h5 class="card-title">Coffee</h5><hr>
+                            <p class="card-text">A delightful range of coffee beverages. <br> <b>Price : 300</b></p>
+                            <button><b>ADD TO CART <b>+</b></b></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="vanila.jpg" class="card-img-top" alt="Pastry" height="350px">
+                        <div class="card-body">
+                            <h5 class="card-title">Vanilla Shake</h5><hr>
+                            <p class="card-text">Have a break , Drink Vanilla Shake. <br> <b>Price 150</b></p>
+                            <button><b>ADD TO CART <b>+</b></b></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="caramel.jpeg" class="card-img-top" alt="Pastry" height="350px">
+                        <div class="card-body">
+                            <h5 class="card-title">Caramel Shake</h5><hr>
+                            <p class="card-text">Have a break , Drink Caramel Shake. <br> <b>Price 150</b></p>
+                            <button><b>ADD TO CART <b>+</b></b></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="brounie.jpeg" class="card-img-top" alt="Pastry" height="325px">
+                        <div class="card-body">
+                            <h5 class="card-title">Brownie</h5><hr>
+                            <p class="card-text">Taste the chocolatey goodness in every bite! <br> <b>Price 100</b></p>
+                            <button><b>ADD TO CART <b>+</b></b></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="https://5.imimg.com/data5/ZR/JQ/TK/IOS-15292022/chocolate-pastries-500x500.jpeg" class="card-img-top" alt="Pastry" height="325px">
+                        <div class="card-body">
+                            <h5 class="card-title">Pastries</h5><hr>
+                            <p class="card-text">Freshly baked pastries to accompany your coffee. <br> <b>Price : 60</b></p>
+                            <button><b>ADD TO CART <b>+</b></b></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="sandwich.jpeg" class="card-img-top" alt="Sandwich" height="347px">
+                        <div class="card-body">
+                            <h5 class="card-title">Sandwiches</h5>
+                            <hr>
+                            <p class="card-text">Delicious sandwiches for a quick bite. <br> <b>Price : 150</b></p>
+                            <button><b>ADD TO CART <b>+</b></b></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="button">
+            <button type="submit" class="btn btn-primary" fdprocessedid="0r5bef">ORDER HERE</button>
+        </div>
+        <section id="menu" class="py-5">
+            <div class="container">
+                <h2 class="text-center"><b>* Best Sellers *</b></h2><hr>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="coffe.jpeg" class="card-img-top" alt="Coffee" height="350px">
+                            <div class="card-body">
+                                <h5 class="card-title">Coffee</h5><hr>
+                                <p class="card-text">A delightful range of coffee beverages. <br> <b>Price : 300</b></p>
+                                <button><b>ADD TO CART <b>+</b></b></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="brounie.jpeg" class="card-img-top" alt="Pastry" height="325px">
+                            <div class="card-body">
+                                <h5 class="card-title">Brownie</h5><hr>
+                                <p class="card-text">Taste the chocolatey goodness in every bite! <br> <b>Price 100</b></p>
+                                <button><b>ADD TO CART <b>+</b></b></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="caramel.jpeg" class="card-img-top" alt="Pastry" height="350px">
+                            <div class="card-body">
+                                <h5 class="card-title">Caramel Shake</h5><hr>
+                                <p class="card-text">Have a break , Drink Caramel Shake. <br> <b>Price 150</b></p>
+                                <button><b>ADD TO CART <b>+</b></b></button>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="button">
+                        <button type="submit" class="btn btn-primary" fdprocessedid="0r5bef">ORDER HERE</button>
+                    </div>
+    </section>
+    
+
+
+    <section id="contact" class="bg-light">
+        <div class="container">
+                    
+            <h2 class="text-center"><b>Contact Us</b></h2><hr>
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="name"><b>Name</b></label>
+                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="email"><b>Email</b></label>
+                        <input type="email" class="form-control" id="email" placeholder="Your Email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message"><b>Message</b></label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+    </section>
+
+    <footer>
+        <div class="contain"><hr>
+            <p>&copy; <b>2024 Hungries Cafe. All rights reserved.</b></p>
+        </div>
+    </footer>
+</body>
+</html>
